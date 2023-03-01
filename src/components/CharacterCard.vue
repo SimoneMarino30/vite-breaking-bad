@@ -1,5 +1,9 @@
 <script>
 export default {
+  data() {
+    return {};
+  },
+
   props: {
     pic: String,
     name: String,
@@ -20,10 +24,13 @@ export default {
 
 <style lang="scss" scoped>
 h5 {
-  color: green;
+  color: #fff;
   text-transform: uppercase;
 }
 
+p {
+  text-transform: lowercase;
+}
 img {
   min-height: 2rem;
 }
