@@ -1,0 +1,28 @@
+@use "./partials/variables" as *;
+
+body {
+  background-color: $bg;
+  min-height: 100vh;
+}
+
+.container-fluid {
+  background-color: $card-inside;
+  min-height: 5vh;
+}
+
+.big-card {
+  background-color: $card-inside;
+  min-height: 70vh;
+}
+
+.big-card-border {
+  background-color: $card-border;
+  color: $card-inside;
+  height: 3rem;
+  margin-top: 3rem;
+}
+
+.card-box {
+  height: 5rem;
+  border: 3px dashed orange;
+}
