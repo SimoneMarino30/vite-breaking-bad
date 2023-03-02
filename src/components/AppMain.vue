@@ -7,6 +7,7 @@ export default {
 </script>
 
 <template>
+  <!-- <main></main> -->
   <main class="container big-card my-5">
     <div class="divider"></div>
     <CharacterList />

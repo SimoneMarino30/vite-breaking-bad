@@ -1,5 +1,6 @@
 <script>
 import AppMain from "./components/AppMain.vue";
+import AppSelect from "./components/AppSelect.vue";
 import axios from "axios";
 import { store } from "./data/store";
 
@@ -10,7 +11,7 @@ export default {
       title: "Yu-Gi-Oh Api",
     };
   },
-  components: { AppMain },
+  components: { AppMain, AppSelect },
 
   created() {
     axios
@@ -24,12 +25,14 @@ export default {
 </script>
 
 <template>
+  <AppSelect />
   <!-- header -->
-  <!-- <header class="container-fluid"> -->
-  <!-- <div class="container"> -->
-  <!-- <h1>{{ title }}</h1> -->
-  <!-- </div> -->
-  <!-- </header> -->
+  <header class="container-fluid">
+    <div class="container">
+      <h1>{{ title }}</h1>
+    </div>
+  </header>
+
   <!-- big card -->
   <AppMain />
 </template>

@@ -18,7 +18,6 @@ export default {
     <img :src="pic" alt="" class="img-fluid" />
     <h5>{{ name }}</h5>
     <p>{{ archetype }}</p>
-    <p>{{ attribute }}</p>
   </div>
 </template>
 
