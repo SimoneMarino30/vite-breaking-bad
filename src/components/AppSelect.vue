@@ -38,14 +38,27 @@ export default {
     };
   },
 
-  props: {},
+  //   props: {
+  //     cardTypes: Array,
+  //   },
+
+  emits: ["selectType"],
+
+  methods: {
+    selectedOption() {
+      this.$emit("selectType", this.cardTypes);
+      console.log(this.cardTypes);
+    },
+  },
 };
 </script>
 
 <template>
   <!-- select -->
-  <select name="select" id="">
-    <option value="" v-for="cardType in cardTypes">{{ cardType }}</option>
+  <select placeholder="select" id="" @selectType="selectedOption">
+    <option value="" v-for="cardType in cardTypes">
+      {{ cardType }}
+    </option>
   </select>
 </template>
 

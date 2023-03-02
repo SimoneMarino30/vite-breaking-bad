@@ -8,10 +8,17 @@ export default {
   data() {
     return {
       store,
+      endpoint: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=15&offset=0",
       title: "Yu-Gi-Oh Api",
     };
   },
   components: { AppMain, AppSelect },
+
+  // methods: {
+  //   fetchSelectedType(cardTypes) {
+  //     console.log(cardTypes);
+  //   },
+  // },
 
   created() {
     axios
@@ -25,14 +32,14 @@ export default {
 </script>
 
 <template>
-  <AppSelect />
   <!-- header -->
   <header class="container-fluid">
     <div class="container">
       <h1>{{ title }}</h1>
     </div>
   </header>
-
+  <!-- @selectType="fetchSelectedType" -->
+  <AppSelect />
   <!-- big card -->
   <AppMain />
 </template>
