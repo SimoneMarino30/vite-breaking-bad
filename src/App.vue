@@ -14,11 +14,11 @@ export default {
   },
   components: { AppMain, AppSelect },
 
-  // methods: {
-  //   fetchSelectedType(cardTypes) {
-  //     console.log(cardTypes);
-  //   },
-  // },
+  methods: {
+    fetchSelectedType() {
+      console.log("ooooooooooooooooo");
+    },
+  },
 
   created() {
     axios
@@ -39,7 +39,7 @@ export default {
     </div>
   </header>
   <!-- @selectType="fetchSelectedType" -->
-  <AppSelect />
+  <AppSelect @selectType="fetchSelectedType" />
   <!-- big card -->
   <AppMain />
 </template>
