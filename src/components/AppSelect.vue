@@ -2,6 +2,8 @@
 export default {
   data() {
     return {
+      term: "",
+
       cardTypes: [
         "Effect Monster",
         "Flip Effect Monster",
@@ -36,17 +38,13 @@ export default {
     };
   },
 
-  // props: {
-  //   cardTypes: Array,
-  // },
-
   emits: ["selectType"],
 };
 </script>
 
 <template>
   <!-- select -->
-  <select placeholder="select" id="">
+  <select placeholder="" id="" v-model="term">
     <option value="" v-for="cardType in cardTypes" @click="$emit('selectType')">
       {{ cardType }}
     </option>

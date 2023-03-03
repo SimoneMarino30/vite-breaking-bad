@@ -16,7 +16,7 @@ export default {
 
   methods: {
     fetchSelectedType() {
-      console.log("ooooooooooooooooo");
+      console.log("####");
     },
   },
 
@@ -38,7 +38,7 @@ export default {
       <h1>{{ title }}</h1>
     </div>
   </header>
-  <!-- @selectType="fetchSelectedType" -->
+
   <AppSelect @selectType="fetchSelectedType" />
   <!-- big card -->
   <AppMain />
